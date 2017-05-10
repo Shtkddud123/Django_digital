@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    {% block title %}<title> Local Library </title> {% endblock %}
+    <!-- CSS types -->
+    <style type = "text/css">
+      div {
+      background-color:red;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      }
+
+      form {
+      /* Just to center the form on the page */
+      margin: 0 auto;
+      width: 400 px;
+      /* To see the outline of the form */
+      padding: 1em;
+      border: 1px solid #CCC;
+      border-radius: 1em;
+      }
+      
+    </style>
+
+    <!-- Javascript types -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+
+
+  
+  <body>
+    What are HTML forms?
+    They are one of the main form of interactions between a user and a website/applcation. They allow users to send data to the web site.
+    Most of the time, that data is sent to the web server, but the web page can also intercept it to use it as its own
+    <div>
+      <p>The time is now to fucking work</p>
+    </div>
+    
+    <form action="/my-handling-form-page" method="post">
+      <div>
+	<label for="name"> Name: </label>
+	<input type = "text" id = "name" name ="user_name">
+	</div>
+	<div>
+	  <label for "mail">E-mail:</label>
+	  <input type = "email" id = "mail" name = "user_mail">
+	  </div>
+	  <div>
+	    <label for="msg">Message:</label>
+	    <textarea id = "msg" name = "user_message"> </textarea>
+	  </div>
+	  </body>
+</html>
