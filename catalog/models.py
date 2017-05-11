@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 from django.db import models
-from django.urls import reverse 
+#from django.urls import reverse 
 import uuid
 
 #class POST(models.model):
@@ -109,11 +109,11 @@ class Paper_database(models.Model):
     text = models.TextField() # large arbirtrary length strings 
     pub_date = models.DateField() # DD/MM/YY/ 
     email = models.EmailField()
-    def get_absolute_url(self):
-        """
-        Returns the url access a particular instance of the model 
-        """
-        return reverse('model-detail-view', args=[str(self.id)])
+   # def get_absolute_url(self):
+    #    """
+     #   Returns the url access a particular instance of the model 
+      #  """
+       # return reverse('model-detail-view', args=[str(self.id)])
     
 class MyModelName(models.Model):
     """
