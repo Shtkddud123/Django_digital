@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang = "em">
+  <head>
+    {% block title %}<title>Local Library </title>{% endblock %}
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width=device-width, intial-scale=1">
+    <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  </head>
+  <body>
+    {% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
+    {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+  </body>
+</html>
