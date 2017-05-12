@@ -27,7 +27,7 @@ with open('/etc/secret_key.txt') as f:
 DEBUG = False
 
 ALLOWED_HOSTS = ['mylittlescience.com','138.68.157.110']
-
+ADMINS = [('sang', 'sangyoung123@googlemail.com')]
 
 # Application definition
 
@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'catalog.apps.CatalogConfig',
+    'organizer',
+    'blog',
 ]
 
 MIDDLEWARE = [

@@ -4,4 +4,9 @@
     list-style: none;
 }
 
+.pumpkin {
+    fill: yellow;
+    stroke: orange;
+    stroke-width: 5;
+}
 

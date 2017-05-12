@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+
+from django.db import models
+
+class Tag(models.Model):
+    name = models.CharField(max_length=31)
+    slug = models.SlugField()
+
+class Startup(models.Model):
+    name = models.CharField(max_length=31)
+    slug = models.SlugField()
+    description = models.TextField()
+    founded_date = models.DateField()
+    contact = models.EmailField()
+    website = models.URLField()
+    
+class NewsLink(models.Model):
+    title = models.CharField(max_length=63)
+    pub_date = models.DateField()
+    link = models.URLField()
+
+class Post(models.Model):
+    title = models.CharField(max_length=63)
+    slug = models.SlugField(
+        max_length= 63,
+        help_text = 'A label for URL config',
+unique_for_month = 'pub_date')
+    text = models.TextField()
+    pub_date = models.DateField(
+        'date published',
+auto_now_add = True)
+    tags = models.ManyToManyField(
+        Tag, related_name='blog_posts')
+    startups = models.ManyToManyField(
+        Startup, related_name = 'blog_posts')

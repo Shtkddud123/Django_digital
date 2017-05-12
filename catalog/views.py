@@ -33,3 +33,13 @@ def index(request):
         'index.html',    
         context = {'num_books':num_books, 'num_students':num_students},
     )
+
+#def science(request):
+#    """
+#    Talking about science 
+#    """
+#    return render (
+#        request,
+#        'science.html',
+#        context = {},
+#)

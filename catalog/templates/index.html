@@ -1,17 +1,70 @@
 {% extends "base_generic.html" %}
 {% block content %}
-<h1>Local Library Home</h1> 
-<p>
-  Welcome to <em>Locallibrary</em>, a very basic django website developed as a tutorial example
-  on the Mozilla Developer Network 
-</p>
+<h1>How does <em>Line Tension</em> affect the Morphology of a Lipid Bilayer?</h1>   
+  <body>
+    The measurement of line tension within a bilayer has become possible due to the
+    advent of computational methods.
+    
+    <script type = "text/javascript">
+    var dataset = [5, 10, 15, 20, 25];
+    d3.select("body").select("p")
+    .data(dataset)
+    .enter()
+    .append("p")
+    .text("New paragraph!");
+    </script>
 
+    <script = "text/javscript">
+      var newdataset = [1,2,3,4,5,6,7,8,9,10];
+      d3.select("body").selectAll("div")
+      .data(newdataset)
+      .enter()
+      .append("div")
+      .attr("class","bar")
+      .style("height", function(d) {
+      var barHeight = d * 5;
+      return barHeight + "px";
+      });
+    </script>
+
+  </body>
+
+  <svg width="500" height = "50">
+    <rect x = "0" y = "0" width="30" height="30" fill="purple"/>
+    <rect x = "20" y = "5" width="30" height="30" fill="blue"/>
+    <rect x = "40" y = "10" width="30" height="30" fill="green"/>
+  </svg>
+
+  
+<button>Press me</button>
+<p class="guesses"></p>
+<p class="lastResult"></p>
+<p class="lowOrHi"></p>
 <div>
-  <p>The time is now to fucking work</p>
+Reviewing the publications
 </div>
 
+<script>
+  var firstName = 'John';
+  document.write('<p>');
+    document.write(firstName);
+    document.write('</p>');
+</script>
+
+
+<script>
+  var authors = [
+  'Ernest Hemingway',
+  'Charlotte Bronte',
+  'Dante Alighieri',
+  'Emily Dickinson'
+  ];
+  document.write('<p> The first author is <strong>');
+  document.write(authors[0] + '</strong></p>');    
+</script>
+
 <h2> Dynamic content </h2>
-    
+
     <form action="/my-handling-form-page" method="post">
       <div>
 	<label for="name"> Name: </label>

@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html lang = "em">
   <head>
-    {% block title %}<title>Local Library </title>{% endblock %}
+    {% block title %}<title>Bilayer Science</title>{% endblock %}
     <meta charset = "utf-8">
     <meta name = "viewport" content = "width=device-width, intial-scale=1">
+    <!-- CSS links -->
     <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style type="text/css">
+      .link {
+      fill: steelblue;
+      stroke: lightgray;
+      stroke-width: 2px;
+      }
+
+      .node circle {
+      stroke: solid black 1px;
+      }
+
+      .node text {
+      pointer-events: none;
+      font: 14px sans-serif;
+      color: blue;
+      }
+
+      div.bar {
+      display: inline-block;
+      width: 20 px;
+      height: 75 px;
+      background-color: teal;
+      }
+    </style>
+
+    <!-- Data visualization modules -->
+     <script type="text/javascript" src="http://mbostock.github.com/d3/d3.v2.js"></script>
+    <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
   </head>
   <body>
-
     <div class = "container-fluid">
       <div class = "row">
 	<div class = "col-sm-2">
 	  {% block sidebar %}
-	  ul class="sidebar-nav">
+	  <ul class="sidebar-nav">
 	  <li><a href="{% url 'index' %}">Home</a></li>
 	  <li><a href="">All books</a></li>
 	  <li><a href="">All authors</a></li>
